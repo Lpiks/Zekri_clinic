@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Phone, Instagram, Globe, ChevronDown } from 'lucide-react';
+import { Menu, X, Phone, Instagram, Globe, ChevronDown, LayoutDashboard } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '../../context/LanguageContext';
 
@@ -119,6 +119,14 @@ const Navbar = () => {
           >
             {t('nav_reserve')}
           </Link>
+
+          <Link 
+            to="/admin"
+            className="flex items-center gap-2 border border-gold/30 text-gold/70 hover:border-gold hover:text-gold px-4 py-2 rounded-sm text-[10px] font-bold uppercase tracking-[0.2em] transition-all duration-500"
+          >
+            <LayoutDashboard size={14} />
+            {t('nav_admin')}
+          </Link>
         </div>
 
         {/* Mobile Toggle */}
@@ -162,6 +170,15 @@ const Navbar = () => {
               className="mt-4 bg-gold text-obsidian px-8 py-3 rounded-sm text-xs font-bold uppercase tracking-widest"
             >
               {t('nav_reserve')}
+            </Link>
+
+            <Link 
+              to="/admin"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="mt-4 flex items-center gap-2 border border-gold/20 text-gold/60 px-8 py-3 rounded-sm text-xs font-bold uppercase tracking-widest hover:border-gold/50"
+            >
+              <LayoutDashboard size={16} />
+              {t('nav_admin')}
             </Link>
             <div className="flex flex-col items-center gap-4 mt-8 pt-8 border-t border-gold/10 w-48">
               <div className="flex gap-8">
