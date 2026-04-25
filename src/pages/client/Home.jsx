@@ -20,7 +20,7 @@ const TeamSection = () => (
             role: 'Chirurgien-Dentiste en Chef', 
             bio: 'Expert en implantologie et esthétique dentaire avec plus de 15 ans d\'expérience.',
             spec: ['Implantologie', 'Facettes Zircone'],
-            img: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=400'
+            img: '/team/dr_zekri.png'
           },
           { 
             name: 'Dr. Nadia Ben', 

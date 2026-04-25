@@ -203,7 +203,6 @@ const Contact = () => {
                     <MapPin size={28} className="animate-bounce" />
                  </div>
                  <p className="text-white text-xs uppercase tracking-[0.5em] font-bold">Localiser la Clinique à Blida</p>
-                 <p className="text-gold/50 text-[10px] uppercase tracking-[0.2em] mt-2 font-bold">FRWX+HHJ, Ouled Yaïch</p>
                  <a 
                    href="https://www.google.com/maps/search/?api=1&query=FRWX%2BHHJ%2C%20Ouled%20Yaïch"
                    target="_blank"
