@@ -6,19 +6,19 @@ const testimonials = [
   {
     text: "Une expérience incroyable. Dr. Zekri est un véritable artiste. Mes facettes en zircone ont totalement changé ma confiance en moi.",
     author: "Sarah B.",
-    location: "Alger",
+    location: "Blida",
     rating: 5
   },
   {
     text: "Clinique de classe mondiale. Je recommande vivement pour les implants. Professionnalisme et propreté irréprochable.",
     author: "Karim L.",
-    location: "Hydra",
+    location: "Blida",
     rating: 5
   },
   {
     text: "L'accueil est chaleureux et les résultats sont au-delà de mes attentes. Le meilleur cabinet dentaire à Alger.",
     author: "Amine K.",
-    location: "Sidi Yahia",
+    location: "Blida",
     rating: 5
   }
 ];
