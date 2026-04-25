@@ -28,8 +28,8 @@ const AdminLogin = () => {
         className="w-full max-w-md bg-obsidian-soft border border-gold/10 p-10 md:p-12 rounded-sm shadow-2xl relative z-10"
       >
         <div className="text-center mb-12">
-          <div className="w-16 h-16 border border-gold flex items-center justify-center rounded-sm mx-auto mb-6">
-            <span className="text-gold font-heading text-3xl">Z</span>
+          <div className="w-20 h-20 flex items-center justify-center overflow-hidden mx-auto mb-6">
+            <img src="/kkk.png" alt="Zekri Logo" className="w-full h-full object-contain" />
           </div>
           <h1 className="text-xl font-heading text-white tracking-[0.3em] uppercase">Private Access</h1>
           <p className="text-[9px] text-gray-500 uppercase tracking-[0.4em] mt-3 italic">Administration Clinique Zekri</p>

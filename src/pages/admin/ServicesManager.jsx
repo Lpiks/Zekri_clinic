@@ -34,10 +34,10 @@ const ServicesManager = () => {
   };
 
   return (
-    <div className="pt-16 pb-20 px-10 max-w-full min-h-screen">
+    <div className="pt-8 md:pt-16 pb-20 px-6 md:px-10 max-w-full min-h-screen">
       <div className="flex justify-between items-center mb-12">
         <div>
-          <h2 className="text-3xl font-heading font-bold text-white uppercase tracking-tight">Gestion des <span className="text-gold">Services</span></h2>
+          <h2 className="text-2xl md:text-3xl font-heading font-bold text-white uppercase tracking-tight">Gestion des <span className="text-gold">Services</span></h2>
           <div className="flex gap-4 mt-2">
             <Link to="/admin" className="text-gray-500 text-[10px] uppercase tracking-widest font-medium hover:text-gold transition-colors">← Dashboard</Link>
             <span className="text-gray-700">|</span>
@@ -46,14 +46,15 @@ const ServicesManager = () => {
         </div>
         <button 
           onClick={() => handleOpenModal()}
-          className="bg-gold text-obsidian px-6 py-3 rounded-sm text-[10px] font-bold uppercase tracking-widest hover:bg-gold-hover transition-all flex items-center gap-2"
+          className="bg-gold text-obsidian px-4 md:px-6 py-3 rounded-sm text-[9px] md:text-[10px] font-bold uppercase tracking-widest hover:bg-gold-hover transition-all flex items-center gap-2 whitespace-nowrap"
         >
           <Plus size={16} />
-          Ajouter un Service
+          <span className="hidden sm:inline">Ajouter un Service</span>
+          <span className="sm:hidden">Ajouter</span>
         </button>
       </div>
 
-      <div className="bg-obsidian-soft border border-gold/10 rounded-sm overflow-hidden">
+      <div className="bg-obsidian-soft border border-gold/10 rounded-sm overflow-x-auto">
         <table className="w-full text-left">
           <thead>
             <tr className="text-gray-500 text-[10px] uppercase tracking-widest border-b border-gold/5 bg-white/5">

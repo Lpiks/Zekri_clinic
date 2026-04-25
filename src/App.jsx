@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { Menu } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
@@ -36,6 +37,7 @@ function AppContent() {
   const showSidebar = isAdminPath && !isLoginPage;
 
   const [showSplash, setShowSplash] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setShowSplash(false), 3000);
@@ -51,10 +53,19 @@ function AppContent() {
       <div className={`min-h-screen flex ${showSidebar ? 'flex-row' : 'flex-col'} ${isAdminPath ? 'bg-[#050505]' : 'bg-obsidian'} selection:bg-gold selection:text-obsidian`}>
         
         {/* Conditional Layout Elements */}
-        {showSidebar && <AdminSidebar />}
+        {showSidebar && <AdminSidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />}
         {!isAdminPath && <Navbar />}
         
         <div className="flex-grow flex flex-col min-h-screen overflow-x-hidden">
+          {showSidebar && (
+            <div className="lg:hidden bg-[#0A0B10] border-b border-gold/10 p-4 flex justify-between items-center sticky top-0 z-[55]">
+              <button onClick={() => setIsSidebarOpen(true)} className="text-gold p-2">
+                <Menu size={24} />
+              </button>
+              <div className="text-gold font-heading font-bold tracking-widest text-xs">ADMIN PANEL</div>
+              <div className="w-10"></div> {/* Spacer to center the title */}
+            </div>
+          )}
           <main className="flex-grow">
             <Routes>
               {/* Client Routes */}

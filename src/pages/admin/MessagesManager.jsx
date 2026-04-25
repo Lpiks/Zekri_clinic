@@ -15,7 +15,7 @@ const MessagesManager = () => {
   );
 
   return (
-    <div className="pt-16 pb-20 px-10 max-w-full min-h-screen relative">
+    <div className="pt-8 md:pt-16 pb-20 px-6 md:px-10 max-w-full min-h-screen relative">
       {/* Message Content Modal */}
       <AnimatePresence>
         {selectedMsg && (
@@ -52,7 +52,7 @@ const MessagesManager = () => {
                    </button>
                 </div>
 
-                <div className="p-10 text-left">
+                <div className="p-6 md:p-10 text-left">
                    <div className="flex flex-col gap-6 mb-12">
                       <div className="flex flex-col gap-2">
                          <span className="text-gray-500 text-[10px] uppercase tracking-widest font-bold">Email du Patient</span>
@@ -103,7 +103,7 @@ const MessagesManager = () => {
 
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
         <div>
-          <h2 className="text-3xl font-heading font-bold text-white uppercase tracking-tight">Messagerie <span className="text-gold">Admin</span></h2>
+          <h2 className="text-2xl md:text-3xl font-heading font-bold text-white uppercase tracking-tight">Messagerie <span className="text-gold">Admin</span></h2>
           <p className="text-gray-500 text-xs mt-2 uppercase tracking-widest font-medium">Consultez les demandes générales et de contact</p>
         </div>
         
@@ -128,7 +128,7 @@ const MessagesManager = () => {
          </div>
       </div>
 
-      <div className="bg-obsidian-soft border border-gold/10 rounded-sm overflow-hidden">
+      <div className="bg-obsidian-soft border border-gold/10 rounded-sm overflow-x-auto">
         <table className="w-full text-left">
           <thead>
             <tr className="text-gray-500 text-[10px] uppercase tracking-widest border-b border-gold/5 bg-white/5">

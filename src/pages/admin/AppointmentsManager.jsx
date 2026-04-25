@@ -32,7 +32,7 @@ const AppointmentsManager = () => {
   };
 
   return (
-    <div className="pt-16 pb-20 px-10 max-w-full min-h-screen relative">
+    <div className="pt-8 md:pt-16 pb-20 px-6 md:px-10 max-w-full min-h-screen relative">
       {/* Patient Details Modal */}
       <AnimatePresence>
         {selectedApp && (
@@ -70,7 +70,7 @@ const AppointmentsManager = () => {
                 </div>
 
                 {/* Content */}
-                <div className="p-10 text-left">
+                <div className="p-6 md:p-10 text-left">
                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                       <div className="space-y-8">
                          <div className="flex flex-col gap-2">
@@ -142,7 +142,7 @@ const AppointmentsManager = () => {
           <p className="text-gray-500 text-xs mt-2 uppercase tracking-widest font-medium">Suivez et validez les demandes de consultation</p>
         </div>
         
-        <div className="flex bg-obsidian-soft border border-gold/10 p-1 rounded-sm gap-1">
+        <div className="flex flex-wrap bg-obsidian-soft border border-gold/10 p-1 rounded-sm gap-1">
            {['All', 'Confirmé', 'En attente', 'Terminé'].map((f) => (
              <button
                key={f}
@@ -173,7 +173,7 @@ const AppointmentsManager = () => {
          </div>
       </div>
 
-      <div className="bg-obsidian-soft border border-gold/10 rounded-sm overflow-hidden">
+      <div className="bg-obsidian-soft border border-gold/10 rounded-sm overflow-x-auto">
         <table className="w-full text-left border-collapse">
           <thead>
             <tr className="text-gray-500 text-[10px] uppercase tracking-widest border-b border-gold/5 bg-white/5">

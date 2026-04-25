@@ -9,8 +9,8 @@ const Footer = () => {
         {/* Brand */}
         <div className="col-span-1 md:col-span-1">
           <Link to="/" className="flex items-center gap-3 mb-6">
-            <div className="w-8 h-8 border border-gold/50 flex items-center justify-center rounded-sm">
-              <span className="text-gold font-heading font-medium text-lg">Z</span>
+            <div className="w-10 h-10 flex items-center justify-center overflow-hidden">
+              <img src="/kkk.png" alt="Zekri Logo" className="w-full h-full object-contain" />
             </div>
             <h1 className="text-lg font-heading font-bold tracking-[0.2em] text-white">ZEKRI</h1>
           </Link>

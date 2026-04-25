@@ -19,8 +19,8 @@ const SplashScreen = () => {
           className="flex flex-col items-center"
         >
           {/* Animated Logo */}
-          <div className="w-24 h-24 border border-gold/40 flex items-center justify-center rounded-sm mb-8 relative">
-            <span className="text-gold font-heading text-5xl">Z</span>
+          <div className="w-32 h-32 flex items-center justify-center rounded-sm mb-8 relative overflow-hidden">
+            <img src="/kkk.png" alt="Zekri Logo" className="w-full h-full object-contain" />
             {/* Pulsing border */}
             <motion.div 
               animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0, 0.3] }}

@@ -54,10 +54,10 @@ const GalleryManager = () => {
   };
 
   return (
-    <div className="pt-16 pb-20 px-10 max-w-full min-h-screen">
+    <div className="pt-8 md:pt-16 pb-20 px-6 md:px-10 max-w-full min-h-screen">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
         <div>
-          <h2 className="text-3xl font-heading font-bold text-white uppercase tracking-tight">Portfolio <span className="text-gold">Transformations</span></h2>
+          <h2 className="text-2xl md:text-3xl font-heading font-bold text-white uppercase tracking-tight">Portfolio <span className="text-gold">Transformations</span></h2>
           <p className="text-gray-500 text-xs mt-2 uppercase tracking-widest font-medium">Gérez vos cas cliniques Avant / Après</p>
         </div>
         
@@ -107,7 +107,7 @@ const GalleryManager = () => {
       {/* Advanced Admin Modal */}
       <AnimatePresence>
         {isModalOpen && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center px-4 overflow-y-auto pt-20 pb-10">
+          <div className="fixed inset-0 z-[100] flex items-center justify-center px-4 overflow-y-auto py-10 md:py-20">
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

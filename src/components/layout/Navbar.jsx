@@ -37,8 +37,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 border border-gold/50 flex items-center justify-center rounded-sm group-hover:bg-gold/10 transition-colors duration-300">
-            <span className="text-gold font-heading font-medium text-2xl">Z</span>
+          <div className="w-12 h-12 flex items-center justify-center overflow-hidden">
+            <img src="/kkk.png" alt="Zekri Logo" className="w-full h-full object-contain" />
           </div>
           <div className="flex flex-col">
             <h1 className="text-lg font-heading font-bold tracking-[0.2em] text-white leading-none">ZEKRI</h1>

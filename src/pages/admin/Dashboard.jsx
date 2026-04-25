@@ -31,7 +31,7 @@ const AdminDashboard = () => {
   const todayAppointments = appointments.slice(0, 3); // Mocking today's tasks
 
   return (
-    <div className="pt-16 pb-20 px-10 max-w-full min-h-screen relative">
+    <div className="pt-8 md:pt-16 pb-20 px-6 md:px-10 max-w-full min-h-screen relative">
       {/* Premium Toast Notification */}
       <AnimatePresence>
         {toast && (
