@@ -5,6 +5,7 @@ import BeforeAfterSlider from '../../components/ui/BeforeAfterSlider';
 import ServicesGrid from '../../components/sections/ServicesGrid';
 import WhatsAppButton from '../../components/ui/WhatsAppButton';
 import Testimonials from '../../components/sections/Testimonials';
+import { clinicConfig } from '../../data/config';
 
 const TeamSection = () => (
   <section className="py-24 bg-obsidian relative overflow-hidden">
@@ -16,11 +17,11 @@ const TeamSection = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
         {[
           { 
-            name: 'Dr. Zekri Walid', 
-            role: 'Chirurgien-Dentiste en Chef', 
-            bio: 'Expert en implantologie et esthétique dentaire avec plus de 15 ans d\'expérience.',
+            name: clinicConfig.owner.name, 
+            role: clinicConfig.owner.role, 
+            bio: 'Expert en implantologie and esthétique dentaire avec plus de 15 ans d\'expérience.',
             spec: ['Implantologie', 'Facettes Zircone'],
-            img: '/team/dr_zekri.png'
+            img: clinicConfig.owner.img
           },
           { 
             name: 'Dr. Nadia Ben', 
@@ -132,8 +133,8 @@ const Home = () => {
           </div>
           <div className="max-w-4xl mx-auto">
             <BeforeAfterSlider 
-              beforeImage="/before2.webp"
-              afterImage="/after2.webp"
+              beforeImage="/before_generic.png"
+              afterImage="/after_generic.png"
             />
           </div>
         </div>

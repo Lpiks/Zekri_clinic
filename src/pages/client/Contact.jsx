@@ -4,6 +4,7 @@ import { Phone, MapPin, Mail, Instagram, Clock, Send, Facebook, Linkedin, Sparkl
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../context/LanguageContext';
 import { useData } from '../../context/DataContext';
+import { clinicConfig } from '../../data/config';
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -71,7 +72,7 @@ const Contact = () => {
                   </div>
                   <div>
                      <h3 className="text-white text-[10px] font-bold uppercase tracking-widest mb-3">{t('contact_label_email')}</h3>
-                     <p className="text-gray-400 text-xs font-light">contact@zekri-dental.com</p>
+                     <p className="text-gray-400 text-xs font-light">{clinicConfig.email}</p>
                   </div>
                </div>
 
@@ -202,7 +203,7 @@ const Contact = () => {
                  <div className="w-16 h-16 bg-gold/10 text-gold flex items-center justify-center rounded-full mb-4 mx-auto border border-gold/20 backdrop-blur-sm">
                     <MapPin size={28} className="animate-bounce" />
                  </div>
-                 <p className="text-white text-xs uppercase tracking-[0.5em] font-bold">Localiser la Clinique à Blida</p>
+                 <p className="text-white text-xs uppercase tracking-[0.5em] font-bold">Localiser la Clinique</p>
                  <a 
                    href="https://www.google.com/maps/search/?api=1&query=FRWX%2BHHJ%2C%20Ouled%20Yaïch"
                    target="_blank"

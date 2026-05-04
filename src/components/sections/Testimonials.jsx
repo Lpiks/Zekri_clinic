@@ -4,15 +4,15 @@ import { Quote, Star } from 'lucide-react';
 
 const testimonials = [
   {
-    text: "Une expérience incroyable. Dr. Zekri est un véritable artiste. Mes facettes en zircone ont totalement changé ma confiance en moi.",
+    text: "Une expérience incroyable. Le Docteur est un véritable artiste. Mes facettes en zircone ont totalement changé ma confiance en moi.",
     author: "Sarah B.",
-    location: "Blida",
+    location: "Alger",
     rating: 5
   },
   {
     text: "Clinique de classe mondiale. Je recommande vivement pour les implants. Professionnalisme et propreté irréprochable.",
     author: "Karim L.",
-    location: "Blida",
+    location: "Alger",
     rating: 5
   },
   {

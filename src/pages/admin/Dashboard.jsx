@@ -3,6 +3,7 @@ import { useData } from '../../context/DataContext';
 import { Trash2, Plus, Edit2, Calendar, Settings, Users, Clock, ArrowRight, ShieldCheck, FileText, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { clinicConfig } from '../../data/config';
 
 const AdminDashboard = () => {
   const { appointments, services, deleteAppointment } = useData();
@@ -55,7 +56,7 @@ const AdminDashboard = () => {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
         <div>
           <h2 className="text-3xl font-heading font-bold text-white uppercase tracking-tight">System <span className="text-gold">Overview</span></h2>
-          <p className="text-gray-500 text-xs mt-2 uppercase tracking-widest font-medium">Gestion de la Clinique Zekri</p>
+          <p className="text-gray-500 text-xs mt-2 uppercase tracking-widest font-medium">Gestion de la {clinicConfig.fullName}</p>
         </div>
         <div className="flex gap-4">
           <Link to="/" className="bg-white/5 text-white border border-white/10 px-6 py-2 rounded-sm text-[10px] font-bold uppercase tracking-widest hover:bg-white/10 transition-all flex items-center gap-2">

@@ -11,7 +11,7 @@ export const useData = () => {
 
 export const DataProvider = ({ children }) => {
   const [services, setServices] = useState(() => {
-    const saved = localStorage.getItem('zekri_services');
+    const saved = localStorage.getItem('clinic_services');
     if (!saved) return initialServices;
     
     // Merge logic: keep user updates but ensure new missing fields (like 'image') are included
@@ -28,12 +28,12 @@ export const DataProvider = ({ children }) => {
   });
 
   const [appointments, setAppointments] = useState(() => {
-    const saved = localStorage.getItem('zekri_appointments');
+    const saved = localStorage.getItem('clinic_appointments');
     return saved ? JSON.parse(saved) : initialAppointments;
   });
 
   const [messages, setMessages] = useState(() => {
-    const saved = localStorage.getItem('zekri_messages');
+    const saved = localStorage.getItem('clinic_messages');
     if (saved) {
       const parsed = JSON.parse(saved);
       return parsed.length > 0 ? parsed : initialMessages;
@@ -42,15 +42,15 @@ export const DataProvider = ({ children }) => {
   });
 
   useEffect(() => {
-    localStorage.setItem('zekri_services', JSON.stringify(services));
+    localStorage.setItem('clinic_services', JSON.stringify(services));
   }, [services]);
 
   useEffect(() => {
-    localStorage.setItem('zekri_appointments', JSON.stringify(appointments));
+    localStorage.setItem('clinic_appointments', JSON.stringify(appointments));
   }, [appointments]);
 
   useEffect(() => {
-    localStorage.setItem('zekri_messages', JSON.stringify(messages));
+    localStorage.setItem('clinic_messages', JSON.stringify(messages));
   }, [messages]);
 
   // CRUD for Services

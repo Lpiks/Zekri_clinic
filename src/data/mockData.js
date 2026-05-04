@@ -59,7 +59,7 @@ export const initialMessages = [
     name: 'Amine Djazaïri',
     email: 'amine@email.com',
     subject: 'Demande de devis pour implants',
-    message: 'Bonjour Docteur Zekri, je souhaiterais avoir une estimation de prix pour la pose de deux implants. Merci.',
+    message: 'Bonjour Docteur, je souhaiterais avoir une estimation de prix pour la pose de deux implants. Merci.',
     date: '2026-04-19T14:30:00Z'
   },
   {

@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import BeforeAfterSlider from '../../components/ui/BeforeAfterSlider';
 
 const galleryCases = [
-  { id: 1, title: 'Restauration Zircone', type: 'Esthétique', before: '/cases/case1_before.png', after: '/cases/case1_after.png' },
-  { id: 2, title: 'Inlay-Core & Couronne', type: 'Prothèse', before: '/cases/case2_before.png', after: '/cases/case2_after.png' },
-  { id: 3, title: 'Hollywood Smile', type: 'Total Transformation', before: '/cases/case3_before.png', after: '/cases/case3_after.png' },
+  { id: 1, title: 'Restauration Zircone', type: 'Esthétique', before: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=800', after: 'https://images.unsplash.com/photo-1559832333-5286595568ef?auto=format&fit=crop&q=80&w=800' },
+  { id: 2, title: 'Inlay-Core & Couronne', type: 'Prothèse', before: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800', after: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f2aa?auto=format&fit=crop&q=80&w=800' },
+  { id: 3, title: 'Hollywood Smile', type: 'Total Transformation', before: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800', after: 'https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?auto=format&fit=crop&q=80&w=800' },
 ];
 
 const Gallery = () => {

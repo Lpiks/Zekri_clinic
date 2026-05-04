@@ -12,6 +12,8 @@ import {
 } from 'lucide-react';
 
 import { motion, AnimatePresence } from 'framer-motion';
+import { clinicConfig } from '../../data/config';
+import ClinicLogo from '../ui/ClinicLogo';
 
 const AdminSidebar = ({ isOpen, setIsOpen }) => {
   const location = useLocation();
@@ -45,11 +47,11 @@ const AdminSidebar = ({ isOpen, setIsOpen }) => {
         {/* Admin Branding */}
         <div className="p-8 border-b border-gold/5 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 flex items-center justify-center overflow-hidden">
-              <img src="/kkk.png" alt="Zekri Logo" className="w-full h-full object-contain" />
+            <div className="w-8 h-8 flex items-center justify-center bg-gold/10 rounded-sm border border-gold/20">
+              <ClinicLogo size={18} className="text-gold" />
             </div>
             <div>
-              <h1 className="text-sm font-heading font-bold tracking-widest text-white leading-none">ZEKRI</h1>
+              <h1 className="text-sm font-heading font-bold tracking-widest text-white leading-none uppercase">{clinicConfig.name}</h1>
               <p className="text-[8px] tracking-[0.2em] text-gold uppercase mt-1">Admin Panel</p>
             </div>
           </div>

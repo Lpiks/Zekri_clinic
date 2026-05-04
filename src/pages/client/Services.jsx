@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useData } from '../../context/DataContext';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { clinicConfig } from '../../data/config';
 
 const Services = () => {
   const { services } = useData();
@@ -93,7 +94,7 @@ const Services = () => {
       {/* Trust Section */}
       <section className="mt-32 py-24 bg-obsidian-soft border-y border-gold/5">
          <div className="max-w-4xl mx-auto px-6 text-center">
-            <h3 className="text-white text-2xl font-heading mb-8">Engagement Qualité Zekri</h3>
+            <h3 className="text-white text-2xl font-heading mb-8">Engagement Qualité {clinicConfig.name}</h3>
             <p className="text-gray-500 text-sm font-light leading-relaxed italic mb-0">
                "Nous ne nous contentons pas de soigner des dents ; nous sculptons des sourires qui changent des vies."
             </p>

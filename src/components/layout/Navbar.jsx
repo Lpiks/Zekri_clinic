@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone, Instagram, Globe, ChevronDown, LayoutDashboard } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '../../context/LanguageContext';
+import { clinicConfig } from '../../data/config';
+import ClinicLogo from '../ui/ClinicLogo';
 
 const Navbar = () => {
   const { lang, setLang, t } = useLanguage();
@@ -35,14 +37,14 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        {/* Logo */}
+        {/* Logo Icon */}
         <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-12 h-12 flex items-center justify-center overflow-hidden">
-            <img src="/kkk.png" alt="Zekri Logo" className="w-full h-full object-contain" />
+          <div className="w-11 h-11 flex items-center justify-center bg-gradient-to-tr from-gold/15 to-transparent rounded-sm border border-gold/20 group-hover:border-gold/40 transition-all duration-500 shadow-inner">
+            <ClinicLogo size={24} className="text-gold group-hover:scale-110 transition-transform duration-500" />
           </div>
           <div className="flex flex-col">
-            <h1 className="text-lg font-heading font-bold tracking-[0.2em] text-white leading-none">ZEKRI</h1>
-            <p className="text-[9px] tracking-[0.4em] text-gold uppercase mt-1">Dental Clinic</p>
+            <h1 className="text-lg font-heading font-bold tracking-[0.2em] text-white leading-none uppercase group-hover:text-gold transition-colors duration-500">{clinicConfig.name}</h1>
+            <p className="text-[9px] tracking-[0.4em] text-gold/60 uppercase mt-1.5">{clinicConfig.subName}</p>
           </div>
         </Link>
 
