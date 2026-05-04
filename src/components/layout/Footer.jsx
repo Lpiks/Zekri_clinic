@@ -25,7 +25,7 @@ const Footer = () => {
         <div>
           <h4 className="text-gold text-[10px] font-bold uppercase tracking-[0.3em] mb-8">Navigation</h4>
           <ul className="flex flex-col gap-4">
-            {['Accueil', 'Services', 'Galerie', 'Patients', 'Contact'].map((item) => (
+            {['Accueil', 'Services', 'Galerie', 'Contact'].map((item) => (
               <li key={item}>
                 <Link to="/" className="text-gray-400 hover:text-white transition-colors text-xs tracking-widest uppercase">
                   {item}

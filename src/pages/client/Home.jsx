@@ -133,8 +133,8 @@ const Home = () => {
           </div>
           <div className="max-w-4xl mx-auto">
             <BeforeAfterSlider 
-              beforeImage="/before_generic.png"
-              afterImage="/after_generic.png"
+              beforeImage="/before2.webp"
+              afterImage="/after2.webp"
             />
           </div>
         </div>
