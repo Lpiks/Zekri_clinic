@@ -61,7 +61,7 @@ const Contact = () => {
                   </div>
                   <div>
                      <h3 className="text-white text-[10px] font-bold uppercase tracking-widest mb-3">{t('contact_label_phone')}</h3>
-                     <p className="text-white text-lg font-heading tracking-wide">020 50 95 76</p>
+                     <p className="text-white text-lg font-heading tracking-wide">{clinicConfig.phone}</p>
                      <p className="text-gray-500 text-[9px] uppercase tracking-widest mt-1">Ligne Directe VIP</p>
                   </div>
                </div>
@@ -191,7 +191,7 @@ const Contact = () => {
         {/* Full-width Real Map */}
         <div className="mt-32 w-full h-[500px] bg-obsidian-soft border border-gold/10 relative overflow-hidden group">
            <iframe 
-             src="https://www.google.com/maps?q=FRWX+HHJ,+Ouled+Yaïch&output=embed"
+             src={clinicConfig.maps.embedUrl}
              className="w-full h-full border-0 grayscale invert contrast-[1.2] opacity-30 group-hover:opacity-60 transition-opacity duration-1000 pointer-events-none"
              allowFullScreen="" 
              loading="lazy"
@@ -205,7 +205,7 @@ const Contact = () => {
                  </div>
                  <p className="text-white text-xs uppercase tracking-[0.5em] font-bold">Localiser la Clinique</p>
                  <a 
-                   href="https://www.google.com/maps/search/?api=1&query=FRWX%2BHHJ%2C%20Ouled%20Yaïch"
+                   href={clinicConfig.maps.link}
                    target="_blank"
                    rel="noopener noreferrer"
                    className="inline-block mt-6 pointer-events-auto border border-gold/30 text-gold px-8 py-3 text-[9px] uppercase tracking-[0.3em] font-bold hover:bg-gold hover:text-obsidian transition-all backdrop-blur-sm"

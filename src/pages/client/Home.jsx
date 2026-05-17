@@ -15,22 +15,7 @@ const TeamSection = () => (
         <h2 className="text-4xl md:text-5xl font-heading text-white">Nos <span className="italic text-gradient-gold">Praticiens</span></h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-        {[
-          { 
-            name: clinicConfig.owner.name, 
-            role: clinicConfig.owner.role, 
-            bio: 'Expert en implantologie and esthétique dentaire avec plus de 15 ans d\'expérience.',
-            spec: ['Implantologie', 'Facettes Zircone'],
-            img: clinicConfig.owner.img
-          },
-          { 
-            name: 'Dr. Nadia Ben', 
-            role: 'Spécialiste Orthodontie', 
-            bio: 'Dédiée à la correction de l\'alignement dentaire pour des sourires parfaits.',
-            spec: ['Invisalign', 'Orthodontie Enfant'],
-            img: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=400'
-          }
-        ].map((doc, idx) => (
+        {clinicConfig.team.map((doc, idx) => (
           <motion.div 
             key={idx}
             initial={{ opacity: 0, y: 30 }}
@@ -96,7 +81,7 @@ const Home = () => {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-medium text-white mb-8 leading-[1.1] tracking-tight">
               L'Excellence <br />
               <span className="text-gradient-gold italic">Dentaire</span> <br />
-              à Alger
+              à {clinicConfig.address.split(',')[0].trim()}
             </h1>
             <p className="max-w-xl text-gray-400 text-sm md:text-lg mb-12 font-light tracking-wide leading-relaxed">
               Découvrez la synergie parfaite entre technologie de pointe et esthétique raffinée. Spécialiste des facettes en Zircone et de l'implantologie haut de gamme.
@@ -133,8 +118,8 @@ const Home = () => {
           </div>
           <div className="max-w-4xl mx-auto">
             <BeforeAfterSlider 
-              beforeImage="/before2.webp"
-              afterImage="/after2.webp"
+              beforeImage="/before_generic.png"
+              afterImage="/after_generic.png"
             />
           </div>
         </div>

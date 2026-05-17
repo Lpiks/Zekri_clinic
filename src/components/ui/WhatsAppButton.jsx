@@ -1,11 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
+import { clinicConfig } from '../../data/config';
 
 const WhatsAppButton = () => {
   return (
     <motion.a
-      href="https://wa.me/21320509576" // Updated Clinic WhatsApp
+      href={`https://wa.me/${clinicConfig.whatsapp}`}
       target="_blank"
       rel="noopener noreferrer"
       initial={{ scale: 0, opacity: 0 }}
