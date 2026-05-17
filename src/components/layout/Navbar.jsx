@@ -121,14 +121,6 @@ const Navbar = () => {
           >
             {t('nav_reserve')}
           </Link>
-
-          <Link 
-            to="/admin"
-            className="flex items-center gap-2 border border-gold/30 text-gold/70 hover:border-gold hover:text-gold px-4 py-2 rounded-sm text-[10px] font-bold uppercase tracking-[0.2em] transition-all duration-500"
-          >
-            <LayoutDashboard size={14} />
-            {t('nav_admin')}
-          </Link>
         </div>
 
         {/* Mobile Toggle */}
@@ -174,14 +166,6 @@ const Navbar = () => {
               {t('nav_reserve')}
             </Link>
 
-            <Link 
-              to="/admin"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="mt-4 flex items-center gap-2 border border-gold/20 text-gold/60 px-8 py-3 rounded-sm text-xs font-bold uppercase tracking-widest hover:border-gold/50"
-            >
-              <LayoutDashboard size={16} />
-              {t('nav_admin')}
-            </Link>
             <div className="flex flex-col items-center gap-4 mt-8 pt-8 border-t border-gold/10 w-48">
               <div className="flex gap-8">
                 <button 
@@ -207,6 +191,16 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Floating Edge Admin Portal (Temporary & Translucent) */}
+      <Link 
+        to="/admin"
+        className="fixed top-4 right-2 z-[9999] opacity-50 hover:opacity-100 transition-opacity duration-300 bg-obsidian-soft/80 backdrop-blur-sm border border-gold/20 text-gold px-2.5 py-1.5 rounded-sm text-[8px] font-bold uppercase tracking-widest flex items-center gap-1.5 shadow-xl"
+        title="Administration Panel (Temporary)"
+      >
+        <LayoutDashboard size={10} />
+        {t('nav_admin')}
+      </Link>
     </motion.nav>
   );
 };
